@@ -1,37 +1,7 @@
 <p>{{titulo}}</p>
 
-<mat-form-field appearance="fill">
-  <mat-label> Nome: </mat-label>
-  <input matInput [(ngModel)]="usuario.nome" placeholder="digite o nome">
-</mat-form-field>
-
-<mat-form-field appearance="fill">
-  <mat-label> CPF: </mat-label>
-  <input matInput [(ngModel)]="usuario.cpf">
-</mat-form-field>
-
-<mat-form-field appearance="fill">
-  <mat-label> Idade: </mat-label>
-  <input matInput [(ngModel)]="usuario.idade"><br>
-</mat-form-field>
+<app-cadastro-usuario></app-cadastro-usuario>
+<app-listagem-usuario></app-listagem-usuario>
 
 
-<button mat-raised-button mat-icon-button color="primary"(click)="inserirUsuario()">
-  <mat-icon> add </mat-icon>
-</button>
- 
 
-
-<br>
-
-<mat-card *ngFor="let usuario of usuarios" class="mat-card-simples">
-  <mat-card-header>
-    <mat-card-title><mat-icon> person </mat-icon> {{usuario.nome}} </mat-card-title>
-    <!-- *ngIf vai exibir o cpf, apenas se existir o cpf do usuário -->
-    <mat-card-subtitle *ngIf="usuario.cpf"> CPF: {{usuario.cpf}} Idade: {{usuario.idade}} </mat-card-subtitle>
-  </mat-card-header>
-
-  <mat-card-content>
-    blablabla
-  </mat-card-content>
-</mat-card>

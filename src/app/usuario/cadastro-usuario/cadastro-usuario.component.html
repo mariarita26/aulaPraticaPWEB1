@@ -1,0 +1,19 @@
+<mat-form-field appearance="fill">
+    <mat-label> Nome: </mat-label>
+    <input matInput [(ngModel)]="usuario.nome" placeholder="digite o nome">
+  </mat-form-field>
+  
+  <mat-form-field appearance="fill">
+    <mat-label> CPF: </mat-label>
+    <input matInput [(ngModel)]="usuario.cpf">
+  </mat-form-field>
+  
+  <mat-form-field appearance="fill">
+    <mat-label> Idade: </mat-label>
+    <input matInput [(ngModel)]="usuario.idade"><br>
+  </mat-form-field>
+  
+  
+  <button mat-raised-button mat-icon-button color="primary"(click)="inserirUsuario()">
+    <mat-icon> add </mat-icon>
+  </button>

@@ -1,0 +1,11 @@
+<mat-card *ngFor="let usuario of usuarios" class="mat-card-simples">
+    <mat-card-header>
+      <mat-card-title><mat-icon> person </mat-icon> {{usuario.nome}} </mat-card-title>
+      <!-- *ngIf vai exibir o cpf, apenas se existir o cpf do usuário -->
+      <mat-card-subtitle *ngIf="usuario.cpf"> CPF: {{usuario.cpf}} Idade: {{usuario.idade}} </mat-card-subtitle>
+    </mat-card-header>
+  
+    <mat-card-content>
+      blablabla
+    </mat-card-content>
+  </mat-card>
